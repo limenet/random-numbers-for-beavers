@@ -20,7 +20,7 @@ if((int) $_POST['i_count'] === 1){
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Random Numbers</title>
+    <title>Random Numbers for Beavers</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
