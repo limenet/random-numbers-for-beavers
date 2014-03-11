@@ -83,7 +83,6 @@ if((int) $_POST['i_count'] === 1){
             <li>[<?=$midPoint-$_POST['p_length']/2?>, <?=$midPoint+$_POST['p_length']/2?>] centered at <?=$midPoint?></li>
           <?php endforeach; ?>
           </ol>
-          <pre><?php var_dump($randNumbers);?></pre>
         </div>
       </div>
     </div><!--/.container-->
