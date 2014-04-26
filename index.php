@@ -20,7 +20,7 @@ if((int) $_POST['i_count'] === 1){
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Random Numbers for Beavers</title>
+    <title>Random Location of Control Habitat Center</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,13 +38,13 @@ if((int) $_POST['i_count'] === 1){
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="page-title">Random Numbers for Beavers</h1>
+          <h1 class="page-title">Random Location of Control Habitat Center</h1>
           <h2>Input</h2>
           <form action="index.php" method="POST" role="form">
             <fieldset>
               <legend>Input data</legend>
               <div class="form-group col-md-4">
-                <label for="i_length">available length for beaver habitat</label>
+                <label for="i_length">available length for control habitat</label>
                 <div class="input-group">
                   <input required type="number" class="form-control" id="i_length" name="i_length">
                   <span class="input-group-addon">m</span>
@@ -52,13 +52,13 @@ if((int) $_POST['i_count'] === 1){
               </div>
               <div class="form-group col-md-4">
                 <label for="i_count">number of habitats</label>
-                <input required type="number" class="form-control" id="i_count" name="i_count">
+                <input required type="number" class="form-control" id="i_count" name="i_count" value=1>
               </div>
             </fieldset>
             <fieldset>
               <legend>Parameters</legend>
               <div class="form-group col-md-4">
-                <label for="p_length">length of beaver section</label>
+                <label for="p_length">length for control habitat</label>
                 <div class="input-group">
                   <input required type="number" class="form-control" id="p_length" name="p_length" value=1866>
                   <span class="input-group-addon">m</span>
@@ -67,7 +67,7 @@ if((int) $_POST['i_count'] === 1){
               <div class="form-group col-md-4">
                 <label for="p_buffer">buffer size</label>
                 <div class="input-group">
-                  <input required type="number" class="form-control" id="p_buffer" name="p_buffer" value=100>
+                  <input required type="number" class="form-control" id="p_buffer" name="p_buffer" value=0>
                   <span class="input-group-addon">m</span>
                 </div>
               </div>
