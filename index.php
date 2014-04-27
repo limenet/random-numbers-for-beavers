@@ -41,7 +41,7 @@ if((int) $_POST['i_count'] === 1){
           <h1 class="page-title">Random Location of Control Habitat Center</h1>
           <h2>Input</h2>
           <form action="index.php" method="POST" role="form">
-            <fieldset>
+            <fieldset class="col-md-6">
               <legend>Input data</legend>
               <div class="form-group col-md-4">
                 <label for="i_length">available length for control habitat</label>
@@ -52,7 +52,7 @@ if((int) $_POST['i_count'] === 1){
               </div>
               <input required type="hidden" class="form-control" id="i_count" name="i_count" value=1> <!-- number of habitats -->
             </fieldset>
-            <fieldset>
+            <fieldset class="col-md-6">
               <legend>Parameters</legend>
               <div class="form-group col-md-4">
                 <label for="p_length">length for control habitat</label>
@@ -63,6 +63,7 @@ if((int) $_POST['i_count'] === 1){
               </div>
               <input required type="hidden" class="form-control" id="p_buffer" name="p_buffer" value=0> <!-- buffer size -->
             </fieldset>
+            <div class="clearfix"></div>
             <hr>
             <button type="submit" class="btn btn-primary col-md-4 col-md-offset-4">Submit</button>
           </form>
