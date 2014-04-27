@@ -50,10 +50,7 @@ if((int) $_POST['i_count'] === 1){
                   <span class="input-group-addon">m</span>
                 </div>
               </div>
-              <div class="form-group col-md-4">
-                <label for="i_count">number of habitats</label>
-                <input required type="hidden" class="form-control" id="i_count" name="i_count" value=1>
-              </div>
+              <input required type="hidden" class="form-control" id="i_count" name="i_count" value=1> <!-- number of habitats -->
             </fieldset>
             <fieldset>
               <legend>Parameters</legend>
@@ -64,13 +61,7 @@ if((int) $_POST['i_count'] === 1){
                   <span class="input-group-addon">m</span>
                 </div>
               </div>
-              <div class="form-group col-md-4">
-                <label for="p_buffer">buffer size</label>
-                <div class="input-group">
-                  <input required type="hidden" class="form-control" id="p_buffer" name="p_buffer" value=0>
-                  <span class="input-group-addon">m</span>
-                </div>
-              </div>
+              <input required type="hidden" class="form-control" id="p_buffer" name="p_buffer" value=0> <!-- buffer size -->
             </fieldset>
             <hr>
             <button type="submit" class="btn btn-primary col-md-4 col-md-offset-4">Submit</button>
