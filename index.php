@@ -52,7 +52,7 @@ if((int) $_POST['i_count'] === 1){
               </div>
               <div class="form-group col-md-4">
                 <label for="i_count">number of habitats</label>
-                <input required type="number" class="form-control" id="i_count" name="i_count" value=1>
+                <input required type="hidden" class="form-control" id="i_count" name="i_count" value=1>
               </div>
             </fieldset>
             <fieldset>
@@ -60,14 +60,14 @@ if((int) $_POST['i_count'] === 1){
               <div class="form-group col-md-4">
                 <label for="p_length">length for control habitat</label>
                 <div class="input-group">
-                  <input required type="number" class="form-control" id="p_length" name="p_length" value=1866>
+                  <input required type="number" class="form-control" id="p_length" name="p_length">
                   <span class="input-group-addon">m</span>
                 </div>
               </div>
               <div class="form-group col-md-4">
                 <label for="p_buffer">buffer size</label>
                 <div class="input-group">
-                  <input required type="number" class="form-control" id="p_buffer" name="p_buffer" value=0>
+                  <input required type="hidden" class="form-control" id="p_buffer" name="p_buffer" value=0>
                   <span class="input-group-addon">m</span>
                 </div>
               </div>
