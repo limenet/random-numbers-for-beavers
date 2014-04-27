@@ -43,7 +43,7 @@ if((int) $_POST['i_count'] === 1){
           <form action="index.php" method="POST" role="form">
             <fieldset class="col-md-6">
               <legend>Input data</legend>
-              <div class="form-group col-md-4">
+              <div class="form-group">
                 <label for="i_length">available length for control habitat</label>
                 <div class="input-group">
                   <input required type="number" class="form-control" id="i_length" name="i_length">
@@ -54,7 +54,7 @@ if((int) $_POST['i_count'] === 1){
             </fieldset>
             <fieldset class="col-md-6">
               <legend>Parameters</legend>
-              <div class="form-group col-md-4">
+              <div class="form-group">
                 <label for="p_length">length for control habitat</label>
                 <div class="input-group">
                   <input required type="number" class="form-control" id="p_length" name="p_length">
@@ -65,7 +65,7 @@ if((int) $_POST['i_count'] === 1){
             </fieldset>
             <div class="clearfix"></div>
             <hr>
-            <button type="submit" class="btn btn-primary col-md-4 col-md-offset-4">Submit</button>
+            <button type="submit" class="btn btn-primary col-md-8 col-md-offset-2">Submit</button>
           </form>
           <div class="clearfix"></div>
           <br>
