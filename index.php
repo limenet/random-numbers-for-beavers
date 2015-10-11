@@ -1,19 +1,19 @@
 <?php
-$randNumbers = array();
-if((int) $_POST['i_count'] === 1){
-  $min = $_POST['p_buffer']+$_POST['p_length']/2;
-  $max = $_POST['i_length']-$_POST['p_buffer']-$_POST['p_length']/2;
-  $randNumbers[1] = mt_rand($min, $max);
-}else{
-  //$randNumbers[0] = 0;
+$randNumbers = [];
+if ((int) $_POST['i_count'] === 1) {
+    $min = $_POST['p_buffer'] + $_POST['p_length'] / 2;
+    $max = $_POST['i_length'] - $_POST['p_buffer'] - $_POST['p_length'] / 2;
+    $randNumbers[1] = mt_rand($min, $max);
+} else {
+    //$randNumbers[0] = 0;
   $randNumbers[0] = $_POST['p_buffer'];
-  $maxLengthOfSection = (($_POST['i_length']-2*$_POST['p_buffer'])-($_POST['i_count']-1)*$_POST['p_buffer'])/$_POST['i_count'];
+    $maxLengthOfSection = (($_POST['i_length'] - 2 * $_POST['p_buffer']) - ($_POST['i_count'] - 1) * $_POST['p_buffer']) / $_POST['i_count'];
 
-  for ($i=1; $i <= $_POST['i_count']; $i++) {
-    $j = ($i === 1) ? $_POST['i_count'] : $_POST['i_count']-$i;
+    for ($i = 1; $i <= $_POST['i_count']; $i++) {
+        $j = ($i === 1) ? $_POST['i_count'] : $_POST['i_count'] - $i;
     //$randNumbers[$i] = mt_rand($randNumbers[$i-1]+($_POST['p_length']/2)+$_POST['p_buffer'], $_POST['i_length']-$_POST['p_buffer']-(($j)*$_POST['p_length']+($j)*$_POST['p_buffer']));
-    $randNumbers[$i] = mt_rand(($i-1)*$maxLengthOfSection+($i)*$_POST['p_buffer'], $i*$maxLengthOfSection+($i)*$_POST['p_buffer']);
-  }
+    $randNumbers[$i] = mt_rand(($i - 1) * $maxLengthOfSection + ($i) * $_POST['p_buffer'], $i * $maxLengthOfSection + ($i) * $_POST['p_buffer']);
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -71,8 +71,8 @@ if((int) $_POST['i_count'] === 1){
           <br>
           <h2>Output</h2>
           <ol>
-          <?php unset($randNumbers[0]); foreach($randNumbers as $i => $midPoint): ?>
-            <li>[<?=$midPoint-$_POST['p_length']/2?>, <?=$midPoint+$_POST['p_length']/2?>] centered at <?=$midPoint?></li>
+          <?php unset($randNumbers[0]); foreach ($randNumbers as $i => $midPoint): ?>
+            <li>[<?=$midPoint - $_POST['p_length'] / 2?>, <?=$midPoint + $_POST['p_length'] / 2?>] centered at <?=$midPoint?></li>
           <?php endforeach; ?>
           </ol>
         </div>
